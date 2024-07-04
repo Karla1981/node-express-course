@@ -2,7 +2,7 @@
 const http = require('http');
 
 const server = http.createServer((req, res)=>{
-    //console.log(req)//give a giant object
+    
     if(req.url === '/'){
         res.end('Welcome to our home page!')//send request
     }
