@@ -1,15 +1,16 @@
-const { readFileSync, wtiteFileSync, writeFileSync } = require('fs')
+const fs = require('fs')
 
-// read from file A and file B 
-const first = readFileSync('./temporary/fileA.txt', 'utf8')
-const second = readFileSync('./temporary/fileB.txt', 'utf8')
+const lines = ['line1', 'line2', 'line3']
 
-// display the text from file A and file B
-// console.log(first, second)
-
-// write to a file - if the file exists node will overide and write to it 
-// the flag is appending the second value to the file
-writeFileSync(
-    './temporary/result-sync.txt',
-    `Here is the new result: ${first}, ${second}`, { flag: 'a'}
+fs.writeFileSync(
+  './temporary/fileA.txt',
+  lines.join('\n'),
+  { flag: 'a' }
 )
+
+const fileContent = fs.readFileSync('./temporary/fileA.txt', 'utf-8')
+console.log(fileContent )
+
+console.log('done with this task')
+console.log('starting the next one')
+
