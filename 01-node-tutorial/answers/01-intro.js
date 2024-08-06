@@ -1,6 +1,6 @@
+
 const amount = 14
 
-//
 if ( amount < 15 ){
     console.log('The number is too small ')
 } else {

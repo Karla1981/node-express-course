@@ -13,10 +13,7 @@ const server = http.createServer((req, res)=>{
               <p>We cant' seem to find the 
               page you are looking for</P>
               <a href="/">back home</>`) 
-    }
-    
+    }    
 })
 // port the is listening to
 server.listen(3000)
-
-// control + C to stop the terminal*

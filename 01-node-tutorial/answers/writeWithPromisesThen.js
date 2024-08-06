@@ -31,6 +31,4 @@ const {writeFile, readFile, appendFile} = require('fs').promises;
 
             // Display the error
             console.log(`An error has occurred: ${error}`)
-
         })
-       
