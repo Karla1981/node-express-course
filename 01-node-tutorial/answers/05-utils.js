@@ -1,10 +1,5 @@
-// 
-
-// function helloThere
-const helloThere = (personsName) => {
-    console.log(`Hi ${personsName}`)
+//04-modules.js 2
+const sayHello = (name) => {
+    console.log(`Hello ${name}, how are you?`)
 }
-
-// In order to share the helloThere function we need to export it like so:
-// Or make this file available in 03-module.js we need to export it.
-module.exports = helloThere
+module.exports = sayHello

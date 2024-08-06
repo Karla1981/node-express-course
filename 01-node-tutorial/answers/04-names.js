@@ -1,9 +1,9 @@
-// variables
-const anna = 'Anna'
-const zoe = 'Zoe'
+// this variable is local to this file.
+const secret = 'SUPER SECRET'
 
+// these two variales we can call them anywhere, they are global ariables.
+const caroline = 'Caroline';
+const kara = 'Kara';
 
-//In order to share the variable values of 'anna and zoe' we need to export them like so:
-// Or make this file available in 03-module.js we need to export it.
-module.exports = {anna, zoe}
-
+// export to make the global variables available 
+module.exports = { caroline, kara }
