@@ -1,5 +1,3 @@
-//Modules - encasuplated code -01-intro.js and 05-utils.js
-
 // this variable is local to this file.
 const secret = 'SUPER SECRET'
 

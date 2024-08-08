@@ -1,9 +1,4 @@
 const {writeFile, readFile, appendFile} = require('fs').promises;
-/*
-const first = 'this is for'
-const second = ' the temp'
-const third = ' file!!'
-**/
 
   console.log('line 1')
   writeFile(
@@ -36,6 +31,4 @@ const third = ' file!!'
 
             // Display the error
             console.log(`An error has occurred: ${error}`)
-
         })
-       

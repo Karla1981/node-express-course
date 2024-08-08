@@ -1,7 +1,4 @@
-
 const {readFileSync, writeFileSync} = require("fs").promises;
-//const fs1 = readFileSync.require('fs').promises;
-//const fs2 = WriteFileSync.require('fs');
 
 console.log('start')
 
@@ -38,7 +35,7 @@ const reader = async () => {
         console.log(`Read data, ${readTempFile} ` )
 
     } catch(error) {
-        // console log the error - if case of an error
+        // console log the error - in case of an error
         console.log(`error, ${error}`)
     }
 } 

@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const { products } = require("./data")// data database
+const { products } = require("./data")
 
 // set up static and middleware
 app.use(express.static('./public'))
@@ -17,48 +17,40 @@ app.get('/api/v1/query', (req, res) => {
             return product.name.startsWith(search)
         })
     }
-    if (limit){
+    if(limit){
         sortedProducts = sortedProducts.slice(0, Number(limit))
     }
-    if (sortedProducts.length < 1){
-        return res.status(200).send('No products matched your search')
-    }
-    res.status(200).json(sortedProducts)
+  if (sortedProducts.length < 1){
+      return res.satus(200).send('No products matched your search')
+  }
+  res.status(200).json(sortedProducts)
 })
 
-//app.get() with route parameter -> :productID
+// add an app statement for the url - /api/v1/products - display nothing*
 app.get('/api/v1/products/:productID', (req, res) =>{
-    //res.json(req.params)
+  
     const { productID } = req.params
-    const idToFind = parseInt(req.params.productID)
+    const idToFind = parseInt(req.params.productID);
     const product = products.find((p) => p.id === idToFind)
-
-    // logic for when product is not there with response
-    if(!product){
-     return res.status(404).json({ message: "That product was not found."})
+    
+    if(!product ){
+        return res.status(404).json({ message: 'That produt was not found' })
     }
-
-    //console.log(product)
     res.json(product)
 })
 
-//app.get() to get the data from the database
 app.get('/api/v1/products', (req, res) =>{
-    res.json(products)
+    res.json(product)
 })
 
-// app.get() test
 app.get('/api/v1/test', (req, res) =>{
-    res.json({ message: "It worked!"})
+    res.json({ message: "It worked!" })
 })
 
-// app .all
 app.all('*', (req, res) =>{
     res.status(404).send('resource not found')
 })
 
-app.listen(3000, (req, res) =>{
-    console.log('server listening on port 3000')
+app.listen(3000, () =>{
+    console.log('Listening on port 3000')
 })
-
-console.log('Express Tutorial')
