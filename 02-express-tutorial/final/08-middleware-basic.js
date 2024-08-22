@@ -12,7 +12,7 @@ const logger = (req, res, next) => {
 }
 
 app.get('/', logger, (req, res) => {
-  res.send('Home')
+  res.send('home')
 })
 app.get('/about', logger, (req, res) => {
   res.send('About')
