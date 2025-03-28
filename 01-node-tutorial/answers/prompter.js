@@ -30,7 +30,7 @@ const form = () => {
   <body>
   <p>${item}</p>
   <form method="POST">
-  <input name="item"></input>
+  <input name="item"/>
   <button type="submit">Submit</button>
   </form>
   </body>
@@ -59,6 +59,9 @@ const server = http.createServer((req, res) => {
     res.end(form());
   }
 });
-
+//added server.on
+server.on("request", (req) => {  
+  console.log("event received: ", req.method, req.url);  
+}); 
 server.listen(3000);
 console.log("The server is listening on port 3000.");

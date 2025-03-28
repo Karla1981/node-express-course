@@ -1,3 +1,7 @@
+// Environment variable
+const MY_VAR = 'Hi there!';
+
+console.log(MY_VAR);
 console.log(__dirname);
 console.log(__filename);
 
