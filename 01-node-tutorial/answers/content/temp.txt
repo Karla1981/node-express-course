@@ -1,9 +1,0 @@
-write line 1
-write line 2
-write line 3
-write line 1
-write line 2
-write line 3
-write line 1
-write line 2
-write line 3
