@@ -1,6 +1,6 @@
 const { writeFile, readFile } = require("fs").promises; 
 
-console.log('Write to file first line.')
+console.log('Write to file first line.');
 writeFile('./content/temp.txt', 'write line 1\n', {flag: 'a'} )
 .then(() => { 
     console.log('Write to file second line.') 
@@ -18,4 +18,4 @@ writeFile('./content/temp.txt', 'write line 1\n', {flag: 'a'} )
 })
 .catch((error) => {  
     console.log("An error occurred: ", error)  
-})
+});
