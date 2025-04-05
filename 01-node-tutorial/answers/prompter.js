@@ -22,6 +22,7 @@ const getBody = (req, callback) => {
 
 // here, you could declare one or more variables to store what comes back from the form.
 let item = "Enter something below.";
+let item2 = "Greed someone.";
 
 // here, you can change the form below to modify the input fields and what is displayed.
 // This is just ordinary html with string interpolation.
@@ -29,8 +30,10 @@ const form = () => {
   return `
   <body>
   <p>${item}</p>
+  <p>${item2}</p>
   <form method="POST">
   <input name="item"/>
+  <input name="item2"/>
   <button type="submit">Submit</button>
   </form>
   </body>
