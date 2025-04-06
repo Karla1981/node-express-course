@@ -10,7 +10,7 @@ writeFile('./content/temp.txt', 'write line 1\n', {flag: 'a'} )
     console.log('Write to file third line.') 
     return writeFile('./content/temp.txt', 'write line 3\n', {flag: 'a'})   
 }) 
-.then((result) =>{   
+.then(() =>{   
     console.log('Read file.')
     return readFile('./content/temp.txt', 'utf8')
 }).then((result ) =>{

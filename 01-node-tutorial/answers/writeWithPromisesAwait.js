@@ -4,30 +4,29 @@ const { writeFile, readFile } = require("fs").promises;
 const writer = async () => {
     const text1 = 'This is a\n';
     const text2 = 'new\n';
-    const text3 = 'line.'
+    const text3 = 'line.\n'
 
     try{
         result = await writeFile(
             './content/temp.txt',
-            `Here is the reult for all 3 texts: ${text1} ${text2} ${text3} `, {flag: 'a'});
+            `Here is the reult for all 3 texts:\n ${text1} ${text2} ${text3} `, {flag: 'a'});
     } catch(error) {
         console.log("An error occurred: ", error)
     }
 }
-console.log('writer 1')
-
 // Create async function called reader.
 const reader = async () => {
     const tempFileRead = await readFile('./content/temp.txt', 'utf8');
 
     console.log(`temp file reads: ${tempFileRead}`);
 }
-console.log('read 2')
-
+console.log('temp file reads:', reader());
 // create a readWrite function 
 const readWrite = async () => {
-    result = writer();//You get back a promise
-    return reader()
+
+    // call the two fucntions in order.
+   writer(); 
+   reader();
 }
-console.log('third!')
+// call readWrite function
 readWrite();
