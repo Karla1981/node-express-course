@@ -7,7 +7,7 @@ const writer = async () => {
     const text3 = 'line.\n'
 
     try{
-        result = await writeFile(
+       await writeFile(
             './content/temp.txt',
             `Here is the reult for all 3 texts:\n ${text1} ${text2} ${text3} `, {flag: 'a'});
     } catch(error) {

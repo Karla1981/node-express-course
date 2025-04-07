@@ -65,3 +65,16 @@ write line 3
 write line 1
 write line 2
 write line 3
+Here is the reult for all 3 texts:
+ This is a
+ new
+ line.
+ Here is the reult for all 3 texts:
+ This is a
+ new
+ line.
+ Here is the reult for all 3 texts:
+ This is a
+ new
+ line.
+ 
