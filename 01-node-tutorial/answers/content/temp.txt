@@ -1,9 +1,0 @@
-Here is the reult for all 3 texts:
- This is a
- new
- line.
- Here is the reult for all 3 texts:
- This is a
- new
- line.
- 
