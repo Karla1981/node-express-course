@@ -9,7 +9,7 @@ const writer = async () => {
     try{
        await writeFile(
             './content/temp.txt',
-            `Here is the reult for all 3 texts:\n ${text1} ${text2} ${text3} `, {flag: 'a'});
+            `Here is the reult for all 3 texts:\n ${text1} ${text2} ${text3} `);
     } catch(error) {
         console.log("An error occurred: ", error)
     }
