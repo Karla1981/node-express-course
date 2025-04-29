@@ -4,8 +4,12 @@ const getAllTasks = (req, res) => {
     res.send('get all tasks from here')
 }
 const createTask = async (req, res) => {
+    try{
     const task = await Task.create(req.body)
     res.status(201).json({ task })
+    }catch(error){
+        console.log(error)
+    }
 }
 const getTask = (req, res) => {
     res.send('get single task')
