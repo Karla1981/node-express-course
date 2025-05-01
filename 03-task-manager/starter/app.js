@@ -3,20 +3,23 @@ const app = express()
 const tasks = require('./routes/tasks')
 const connectDB = require('./db/connect')
 require('dotenv').config()
+const notFound = require('./middleware/not-found')
+const errorHandlerMiddleware = require('./middleware/error-handler')
 
+//middleware - allows us to get the app 
+app.use(express.static('./public'))
 //middleware - allows us to get json
 app.use(express.json())
 
 // base path for all the functions
 app.use('/api/v1/tasks', tasks)
 
-//routes
-app.get('/hello', (req, res) => {
-    res.send('Taks manager app.')
-})
+// this handles the 404 response
+app.use(notFound)
 
-const port = 3000
+app.use(errorHandlerMiddleware)
 
+const port = process.env.PORT || 3000
 const start = async () => {
     try {
         await connectDB(process.env.MONGO_URI)
