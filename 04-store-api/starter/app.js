@@ -1,10 +1,5 @@
 require('dotenv').config()
-// async errors - package
 require('express-async-errors')
-
-
-
-
 const express = require('express')
 const app = express()
 
@@ -20,16 +15,11 @@ const errorMiddleware = require('./middleware/error-handler')
 app.use(express.json())
 
 // routes
-
-
 app.get('/', (req, res) => {
     res.send('<h1>Store API</h1><a href="/api/v1/products">Produts Route</a>')
 })
 // base routing
 app.use('/api/v1/products', productsRouter)
-
-// produts route
-
 
 app.use(notFoundMiddleware)
 app.use(errorMiddleware)
@@ -46,6 +36,3 @@ const start = async () => {
     }
 }
 start()
-
-
-
